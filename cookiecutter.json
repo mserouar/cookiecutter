@@ -1,0 +1,20 @@
+{
+	"python_version": ["3.6", "3.7", "3.8"],
+	"trait_or_name": "",
+	"vector": [
+		"Multi",
+		"Phenomobile",
+		"Alphi",
+		"PheB",
+		"LITERAL",
+		"UAV",
+		"Phenofield"
+		],
+	"module_name": "{{[cookiecutter.trait_or_name|trim, cookiecutter.vector.split()|first ]|select|join(' ')}}",
+	"module_slug": "{{[cookiecutter.trait_or_name|trim|replace(' ', ''), cookiecutter.vector.split()|first]|select|join('-')|lower}}",
+	"package_name": "{{cookiecutter.module_slug|trim|replace('-', '')}}",
+	"short_description": "",
+	"init_git_repository": "y",
+	"init_virtual_env": "y",
+	"virtual_env": ["conda", "virtualenvwrapper", "venv"]
+}
